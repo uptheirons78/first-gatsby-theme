@@ -1,0 +1,142 @@
+{
+  "Javascript Code Block": {
+    "scope": "markdown",
+    "prefix": "js",
+    "body": [
+      "```javascript",
+      "$0",
+      "```"
+    ],
+    "description": "Create a block of javascript code in Markdown"
+  },
+  "Link": {
+    "scope": "markdown",
+    "prefix": "li",
+    "body": [
+      "[$1]($2)"
+    ],
+    "description": "Create a link in Markdown"
+  },
+  "Heading 1": {
+    "scope": "markdown",
+    "prefix": "h1",
+    "body": [
+      "# $0"
+    ],
+    "description": "Create a heading 1 block in Markdown"
+  },
+  "Heading 2": {
+    "scope": "markdown",
+    "prefix": "h2",
+    "body": [
+      "## $0"
+    ],
+    "description": "Create a heading 2 block in Markdown"
+  },
+  "Heading 3": {
+    "scope": "markdown",
+    "prefix": "h3",
+    "body": [
+      "### $0"
+    ],
+    "description": "Create a heading 3 block in Markdown"
+  },
+  "Heading 4": {
+    "scope": "markdown",
+    "prefix": "h4",
+    "body": [
+      "#### $0"
+    ],
+    "description": "Create a heading 4 block in Markdown"
+  },
+  "Heading 5": {
+    "scope": "markdown",
+    "prefix": "h5",
+    "body": [
+      "##### $0"
+    ],
+    "description": "Create a heading 5 block in Markdown"
+  },
+  "Heading 6": {
+    "scope": "markdown",
+    "prefix": "h6",
+    "body": [
+      "###### $0"
+    ],
+    "description": "Create a heading 6 block in Markdown"
+  },
+  "Bold": {
+    "scope": "markdown",
+    "prefix": "!b",
+    "body": [
+      "**$0**"
+    ],
+    "description": "Create a bold block in Markdown"
+  },
+  "Bold and Italic": {
+    "scope": "markdown",
+    "prefix": "!bi",
+    "body": [
+      "**_$0_**"
+    ],
+    "description": "Create a bold and italic block in Markdown"
+  },
+  "Italic": {
+    "scope": "markdown",
+    "prefix": "!i",
+    "body": [
+      "_$0_"
+    ],
+    "description": "Create an italic block in Markdown"
+  },
+  "Strikethrough": {
+    "scope": "markdown",
+    "prefix": "!strick",
+    "body": [
+      "~~$0~~"
+    ],
+    "description": "Create an Strikethrough block in Markdown"
+  },
+  "BlockQuotes": {
+    "scope": "markdown",
+    "prefix": "!quote",
+    "body": [
+      "> $0"
+    ],
+    "description": "Create a blockquote in Markdown"
+  },
+  "Highlight Text": {
+    "scope": "markdown",
+    "prefix": "!light",
+    "body": [
+      "==$0=="
+    ],
+    "description": "Create an highlight text block in Markdown"
+  },
+  "Bold and Highlight Text": {
+    "scope": "markdown",
+    "prefix": "!bh",
+    "body": [
+      "==**$0**=="
+    ],
+    "description": "Create a bold highlight text block in Markdown"
+  },
+  "List Block": {
+    "scope": "markdown",
+    "prefix": "!list",
+    "body": [
+      "1. $1",
+      "2. $2",
+      "3. $3",
+    ],
+    "description": "Create a list block in Markdown"
+  },
+  "Lorem Ipsum": {
+    "scope": "markdown",
+    "prefix": "!lorem",
+    "body": [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et iaculis nisi. Nunc dictum eros a orci dapibus, ut scelerisque turpis pharetra. Praesent venenatis purus lacus, eu mattis lacus lobortis eu. Aliquam at lectus augue. Suspendisse tincidunt augue vitae ornare sodales."
+    ],
+    "description": "Create a Lorem Ipsum text in Markdown"
+  },
+}

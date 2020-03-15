@@ -1,0 +1,23 @@
+{
+  "name": "gatsby-theme-syl",
+  "version": "1.0.0",
+  "author": "Mauro Bono",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "clean": "gatsby clean"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.19.43",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  },
+  "devDependencies": {
+    "gatsby": "^2.19.43",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  }
+}
