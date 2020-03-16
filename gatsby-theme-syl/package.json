@@ -19,5 +19,8 @@
     "gatsby": "^2.19.43",
     "react": "^16.13.0",
     "react-dom": "^16.13.0"
+  },
+  "dependencies": {
+    "mkdirp": "^1.0.3"
   }
 }
