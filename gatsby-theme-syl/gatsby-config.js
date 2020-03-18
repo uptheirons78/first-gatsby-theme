@@ -18,7 +18,8 @@ module.exports = options => {
             default: require.resolve('./src/components/layout.js')
           }
         }
-      }
+      },
+      `gatsby-plugin-theme-ui`
     ].filter(Boolean)
   };
 };
