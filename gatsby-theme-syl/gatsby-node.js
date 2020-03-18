@@ -12,3 +12,67 @@ exports.onPreBootstrap = ({ store }, options) => {
     mkdirp.sync(dir);
   }
 };
+
+/**
+ * Schema Customization
+ */
+exports.createSchemaCustomization = ({ actions }) => {
+  actions.createTypes(`
+    type DocsPage implements Node @dontInfer {
+      id: ID!
+      title: String!
+      path: String!
+      updated: Date! @dateformat
+      body: String!
+    }
+  `);
+};
+
+/**
+ * Create Nodes
+ */
+exports.onCreateNode = ({ node, actions, getNode, createNodeId }, options) => {
+  const { basePath } = withDefault(options);
+  const parent = getNode(node.parent);
+
+  if (node.internal.type !== 'Mdx' || parent.sourceInstanceName !== 'gatsby-theme-syl') {
+    return;
+  }
+  // treat 'index.mdx' as 'index.html'
+  const pageName = parent.name !== 'index' ? parent.name : '';
+
+  actions.createNode({
+    id: createNodeId(`DocsPage-${node.id}`),
+    title: node.frontmatter.title || parent.name,
+    updated: parent.modifiedTime,
+    path: path.join('/', basePath, parent.relativeDirectory, pageName),
+    parent: node.id,
+    internal: {
+      type: 'DocsPage',
+      contentDigest: node.internal.contentDigest
+    }
+  });
+};
+
+/**
+ * Custom Resolvers
+ */
+exports.createResolvers = ({ createResolvers }) => {
+  createResolvers({
+    DocsPage: {
+      body: {
+        type: 'String!',
+        resolve: (source, args, context, info) => {
+          const type = info.schema.getType('Mdx');
+          const mdxFields = type.getFields();
+          const resolver = mdxFields.body.resolve;
+          const mdxNode = context.nodeModel.getNodeById({ id: source.parent });
+
+          return resolver(mdxNode, args, context, {
+            fieldName: 'body'
+          });
+        }
+      }
+    }
+  });
+};
