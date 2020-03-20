@@ -1,12 +1,5 @@
----
-title: Home
----
-This is from the docs folder!
-
-```js
 import Code from '../components/code';
 
 export default {
   pre: Code
 };
-```
